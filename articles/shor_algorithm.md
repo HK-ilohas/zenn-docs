@@ -1,5 +1,5 @@
 ---
-title: "Shorのアルゴリズムを用いた素因数分解"
+title: "Shorのアルゴリズムを用いた素因数分解のメモ"
 emoji: "🙆"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["量子コンピュータ", "Quantum"]

@@ -6,6 +6,6 @@
 	],
 	"settings": {
 		"editor.formatOnSave": true,
-		"files.autoSave": "afterDelay"
+		"files.autoSave": "afterDelay",
 	},
 }

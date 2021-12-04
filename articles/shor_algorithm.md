@@ -76,4 +76,26 @@ $$
 \end{align*}
 $$
 
-この性質から，$\ket{1}$ で量子位相推定をすると，位相 $s/r$ を計算できます（ただし，$s$ は $0 \leq s \leq r-1$ のランダムな整数）．
+この性質から，$\ket{1}$ で量子位相推定をすると，位相 $s/r$ を計算できます（ただし，$s$ は $0 \leq s \leq r-1$ のランダムな整数）．そして，$s/r$ を連分数展開すると $r$ が求まります．
+
+![](https://storage.googleapis.com/zenn-user-upload/e446c18953da-20211204.png)
+
+### 2.3．冪剰余演算の構成方法
+
+$U$ についての量子位相推定をするためには，$U^n \ket{x} = \ket{a^n x \bmod{N}}$ という冪剰余演算を行う制御ユニタリゲートを構成する必要があり，量子位数発見において最も重い演算です．構成方法は様々ですが，大雑把な流れは次の通りです．
+
+1. $\ket{a+b}$ のような加算回路を作る．
+2. $\ket{(a+b) \bmod{N}}$ のような制御-剰余加算回路を作る．
+3. $\ket{ax \bmod{N}}$ のような制御-剰余加算回路を作る．
+4. $\ket{a^n x \bmod{N}}$ のような制御-冪剰余回路を作る．
+
+個人的にわかり易い構成方法の例を以下に挙げておきます．
+
+- [V. Vedral, A. Barenco and A. Ekert, "Quantum Networks for Elementary Arithmetic Operations", arXiv:quant-ph/9511018, 1995.](https://arxiv.org/pdf/quant-ph/9511018.pdf)
+- [S. Beauregard, "Circuit for Shor's algorithm using 2n+3 qubits", arXiv:quant-ph/0205095, 2003.](https://arxiv.org/pdf/quant-ph/0205095.pdf)
+
+"Quantum Networks for Elementary Arithmetic Operations" は古典的な回路を移植したようなものです．他の方の記事ですが，[量子アルゴリズムの基本：算術演算の確認（べき剰余）](https://qiita.com/SamN/items/cc44c2fb26633567ab5f)で丁寧に解説されています．
+
+"Circuit for Shor's algorithm using 2n+3 qubits" は QFT ベースのもので，半古典的な QFT を用いることで量子ビットの数を削減しています．
+
+## 3．素因数分解

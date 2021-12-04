@@ -25,9 +25,6 @@
            "strict"        : true
         }
     },
-    "@proofdict/proofdict": {
-      "dictURL": "https://azu.github.io/proof-dictionary/"
-    },
     "spellcheck-tech-word": true
   }
 }

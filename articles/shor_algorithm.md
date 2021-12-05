@@ -137,20 +137,36 @@ $N=2^n$ として，通常の Shor のアルゴリズムの計算量は $O(n^3 \
 
 ### 3.3．必要な量子ビット数と実行時間の概算
 
-Shor のアルゴリズムを用いた 2048 ビットの RSA 暗号の解読にかかる時間については，様々な研究によって概算されています．文献によって仮定や実装方法が異なるので，目についたものを一通り載せておきます．
+Shor のアルゴリズムを用いた 2048 ビットの RSA 暗号の解読にかかる時間については，様々な研究によって概算されています．文献によって仮定や実装方法が異なるので，目についたものを一通り載せておきます^[実装方法によっては解いている問題が変わっています．例えば，"How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits" は素因数分解ではなく，より小さな離散対数問題にすることで効率化を達成しています．そのため，Shor のアルゴリズムとしてカウントしていいかは怪しいです．]．
 
 #### 量子ビット数：856 万個，28.63 時間
 
 『米国科学・工学・医学アカデミーによる量子コンピュータの進歩と展望』（原著者：米国科学・工学・医学アカデミー, 訳者：西森秀稔）に載っていた数値です．
 
-#### 量子ビット数：2000 万個（ノイズ付き），8 時間
+#### 量子ビット数：2000 万個，7.44 時間
 
 [C. Gidney and M. Ekerå, "How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits", Quantum, Vol. 5, p. 433, 2021.](https://arxiv.org/pdf/1905.09749.pdf)
 
-様々な工夫がされていますが，一応 Shor のアルゴリズムとしてカウントしました．
+#### 量子ビット数：1 億 7000 万個，1 日
+
+[V. Gheorghiu and M. Mosca, "Benchmarking the quantum cryptanalysis of symmetric, public-key and hash-based cryptographic schemes", arXiv:1902.02332, 2019.](https://arxiv.org/pdf/1902.02332.pdf)
+
+#### 量子ビット数：2 億 3000 万個，3.7 日
+
+[J. O'Gorman and E. T. Campbell, "Quantum computation with realistic magic-state factories", Phys. Rev. A, Vol. 95, p. 032338, 2017.](https://journals.aps.org/pra/pdf/10.1103/PhysRevA.95.032338)
+
+#### 量子ビット数：10 億個，1.1 日
+
+[A. G. Fowler et al., "Surface codes: Towards practical large-scale quantum computation", Phys. Rev. A, Vol. 86, p. 032324, 2012.](https://arxiv.org/ftp/arxiv/papers/1208/1208.0928.pdf)
+
+#### 量子ビット数：6 億 2000 万個，10 日
+
+[N. C. Jones et al., "Layered Architecture for Quantum Computing", Phys. Rev. X, Vol. 2, p. 031007, 2012.](https://journals.aps.org/prx/pdf/10.1103/PhysRevX.2.031007)
+
+#### 量子ビット数：65 億個，410 日
+
+[R. V. Meter et al., "Distributed Quantum Computation Architecture Using Semiconductor Nanophotonics", Int. J. Quantum Inf., Vol. 08, pp. 295-323, 2010.](https://arxiv.org/pdf/0906.2686.pdf)
 
 #### 量子ビット数：13436 個，177 日
 
 [É. Gouzien and N. Sangouard, "Factoring 2048-bit RSA Integers in 177 Days with 13436 Qubits and a Multimode Memory", Phys. Rev. Lett., Vol. 127, p. 140503, 2021.](https://arxiv.org/pdf/2103.06159.pdf)
-
-実行時間が増える代わりに，量子ビット数を減らしているようです．これも一応 Shor のアルゴリズムとしてカウントしました．

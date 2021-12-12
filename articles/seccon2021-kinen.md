@@ -204,7 +204,7 @@ $$
 
 $B$ に LLL を使うとたまにしか成功しませんでした．本番中は試行回数で乗り切りましたが，終了後に BKZ でいけるみたいな話を見かけて (・・?？❓ ってなってます（現在進行形）．
 
-```python:solve.py
+```python:solve.sage
 from Crypto.Util.number import long_to_bytes, bytes_to_long
 
 

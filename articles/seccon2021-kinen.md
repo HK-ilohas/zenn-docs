@@ -186,7 +186,7 @@ $$
 \end{align*}
 $$
 
-これを基に格子を作ってみました（本番中の僕は何となく正方行列にしてたナゼ？）．
+これを基に格子を作ってみました．
 
 $$
 B = \begin{bmatrix}
@@ -196,9 +196,6 @@ B = \begin{bmatrix}
     \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
     32 \cdot 16^{256} & 0 & 0 & 0 & \cdots & 1 \\
     \text{MESSAGE} - S & 0 & 0 & 0 & 0 & 0\\
-    0  & 0 & 0 & 0 & 0 & 0\\
-    0  & 0 & 0 & 0 & 0 & 0\\
-
 \end{bmatrix}
 $$
 
@@ -218,8 +215,6 @@ B = matrix.column(ZZ, vector([diff_char * 16 ^ (2*i) for i in range(128)]))
 B = B.augment(matrix.identity(128))
 B = B.stack(vector([S - bytes_to_long(MESSAGE)] + [0] * 128))
 B = B.stack(vector([M] + [0] * 128))
-B = B.augment(vector([0] * 130))
-B = B.augment(vector([0] * 130))
 B = B.LLL()
 
 v = B[1][1:-2]

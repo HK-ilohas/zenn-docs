@@ -182,7 +182,7 @@ $$
 \begin{align*}
 &S \equiv \text{message} \pmod{M}\\
 &S \equiv \text{MESSAGE} + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{256} k_{128} \pmod {M}\\
-&S - \text{MESSAGE} + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{256} k_{128} + M l = 0\\
+&\text{MESSAGE} - S + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{256} k_{128} + M l = 0\\
 \end{align*}
 $$
 

@@ -195,7 +195,8 @@ B = \begin{bmatrix}
     32 \cdot 16^4 & 0 & 0 & 1 & \cdots & 0\\
     \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
     32 \cdot 16^{256} & 0 & 0 & 0 & \cdots & 1 \\
-    \text{MESSAGE} - S & 0 & 0 & 0 & 0 & 0\\
+    \text{MESSAGE} - S & 0 & 0 & 0 & \cdots & 0\\
+    M & 0 & 0 & 0 & \cdots & 0
 \end{bmatrix}
 $$
 

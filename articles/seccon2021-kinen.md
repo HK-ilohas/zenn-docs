@@ -218,7 +218,7 @@ B = B.stack(vector([S - bytes_to_long(MESSAGE)] + [0] * 128))
 B = B.stack(vector([M] + [0] * 128))
 B = B.LLL()
 
-v = B[1][1:-2]
+v = B[1][1:]
 print(v)
 
 message = b""

@@ -181,8 +181,8 @@ $M$, $S$ が与えられた状態で message を復元する問題です．messa
 $$
 \begin{align*}
 &S \equiv \text{message} \pmod{M}\\
-&S \equiv \text{MESSAGE} + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{256} k_{128} \pmod {M}\\
-&\text{MESSAGE} - S + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{256} k_{128} + M l = 0\\
+&S \equiv \text{MESSAGE} + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{254} k_{127} \pmod {M}\\
+&\text{MESSAGE} - S + 32 \cdot 16^0 k_0 + 32 \cdot 16^2 k_1 + \cdots 32 \cdot 16^{254} k_{127} + M l = 0\\
 \end{align*}
 $$
 
@@ -194,7 +194,7 @@ B = \begin{bmatrix}
     32 \cdot 16^2 & 0 & 1 & 0 & \cdots & 0\\
     32 \cdot 16^4 & 0 & 0 & 1 & \cdots & 0\\
     \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
-    32 \cdot 16^{256} & 0 & 0 & 0 & \cdots & 1 \\
+    32 \cdot 16^{254} & 0 & 0 & 0 & \cdots & 1 \\
     \text{MESSAGE} - S & 0 & 0 & 0 & \cdots & 0\\
     M & 0 & 0 & 0 & \cdots & 0
 \end{bmatrix}
@@ -243,7 +243,7 @@ B = \begin{bmatrix}
     32 \cdot 16^2 & 0 & 1 & 0 & \cdots & 0 & 0\\
     32 \cdot 16^4 & 0 & 0 & 1 & \cdots & 0 & 0\\
     \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
-    32 \cdot 16^{256} & 0 & 0 & 0 & \cdots & 1 & 0\\
+    32 \cdot 16^{254} & 0 & 0 & 0 & \cdots & 1 & 0\\
     \text{MESSAGE} - S & 0 & 0 & 0 & \cdots & 0 & 1\\
     M & 0 & 0 & 0 & \cdots & 0 & 0
 \end{bmatrix}

@@ -163,7 +163,7 @@ else:
     print("🧙")
 ```
 
-### 考察 & 解法
+### 考察 & 本番中の解法
 
 $$
 \begin{align*}
@@ -231,6 +231,63 @@ for k in v:
 
 print(message)
 # SECCON{Here_is_Huge-Huge_Island_yahhoOoOoOoOoOoO}
+```
+
+### ちゃんと解き直したバージョン
+
+上の方法ではたまにしか解けませんでした．それを修正したのが次のスクリプトです．
+
+$$
+B = \begin{bmatrix}
+    32 \cdot 16^0 & 1 & 0 & 0 & \cdots & 0 & 0\\
+    32 \cdot 16^2 & 0 & 1 & 0 & \cdots & 0 & 0\\
+    32 \cdot 16^4 & 0 & 0 & 1 & \cdots & 0 & 0\\
+    \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+    32 \cdot 16^{256} & 0 & 0 & 0 & \cdots & 1 & 0\\
+    \text{MESSAGE} - S & 0 & 0 & 0 & \cdots & 0 & 1\\
+    M & 0 & 0 & 0 & \cdots & 0 & 0
+\end{bmatrix}
+$$
+
+```python:solve2.sage
+from pwn import *
+from Crypto.Util.number import bytes_to_long
+
+
+MESSAGE = b"O" * 128
+message = b""
+diff_char = 0x20  # b"o" - b"O"
+
+io = remote("oooooo.quals.seccon.jp", 8000)
+io.recvuntil(b"M = ")
+M = int(io.recvline())
+io.recvuntil(b"S = ")
+S = int(io.recvline())
+
+# create lattice
+B = matrix(ZZ, 130, 130)
+for i in range(128):
+    B[i, 0] = diff_char * 16 ^ (2*i)
+for i in range(129):
+    B[i, i+1] = 1
+B[128, 0] = bytes_to_long(MESSAGE) - S
+B[129, 0] = M
+B = B.dense_matrix()
+B = B.BKZ()
+
+v = B[0]
+for k in v[1:-1]:
+    if abs(k) == 1:
+        message = b"o" + message
+    else:
+        message = b"O" + message
+
+print(message)
+
+io.recvuntil(b"message =")
+io.sendline(message)
+print(io.recvline().decode())
+
 ```
 
 ## 解けなかった問題の反省

@@ -422,7 +422,7 @@ print(long_to_bytes(cipher ^ random.getrandbits(cipher.bit_length())))
 
 ```
 
-## omni-RSA
+## omni-RSA [hard]
 
 ### 問題概要
 

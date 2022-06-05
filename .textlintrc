@@ -13,7 +13,7 @@
     "preset-ja-technical-writing": {
         "no-doubled-joshi": false,
         "ja-no-mixed-period": {
-          "periodMark": "．",
+          "periodMark": "。",
           "forceAppendPeriod": true
         },
         "max-kanji-continuous-len": false,

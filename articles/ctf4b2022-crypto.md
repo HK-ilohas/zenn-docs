@@ -245,8 +245,8 @@ if __name__ == '__main__':
 - サーバのプログラム `chal.py` が与えられる
 - 3 つのコマンド `fizzbuzz`, `primes`, `getflag` が用意されている
   - `getflag` を実行すると、フラグが表示される
-  - ただし、`getflag` は選択できない
 - `encrypt` で `fizzbuzz` か `primes` を暗号化できる
+  - `getflag` は選択できない
 - `execute` で暗号化されたコマンドを実行できる
   - ここでは、暗号文さえあれば `getflag` を使える
 

@@ -65,7 +65,7 @@ $$
 \end{aligned}
 $$
 
-が与えられているとします．次に，予測したい入力を $\mathbf{X^*} = (\mathbf{x^*_1},\dots,\mathbf{x^*_M})^T$，予測したい出力を $\mathbf{y^*} = (y^*_1, \dots, y^*_M)^T$ とします．このとき，ガウス過程の予測分布は以下の式になります．
+が与えられているとします．ただし，式を簡単にするために平均を $\mathbf{0}$ とします．次に，予測したい入力を $\mathbf{X^*} = (\mathbf{x^*_1},\dots,\mathbf{x^*_M})^T$，予測したい出力を $\mathbf{y^*} = (y^*_1, \dots, y^*_M)^T$ とします．このとき，ガウス過程の予測分布は以下の式になります．
 
 $$
 p\left(\mathbf{y^*} | \mathbf{X}^*, \mathcal{D}\right)=\mathcal{N}\left(\mathbf{k}_*^T \mathbf{K}^{-1} \mathbf{y}, \mathbf{k}_{* *}-\mathbf{k}_*^T \mathbf{K}^{-1} \mathbf{k}_*\right)

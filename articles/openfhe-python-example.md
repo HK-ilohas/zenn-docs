@@ -3,7 +3,7 @@ title: "OpenFHEのPython wrapperで準同型暗号を試してみた"
 emoji: "🌟"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["準同型暗号", "OpenFHE", "Python"]
-published: false
+published: true
 ---
 
 ## はじめに

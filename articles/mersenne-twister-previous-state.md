@@ -1,22 +1,22 @@
 ---
-title: "Mersenne twister (MT19937) で未来と過去の乱数列を予測してみる【Python】"
+title: "Mersenne Twister (MT19937) で未来と過去の乱数列を予測してみる【Python】"
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python", "乱数", "CTF"]
-published: false
+published: true
 ---
 
 ## はじめに
 
-**Mersenne twister** (**MT**, メルセンヌ・ツイスタ) は擬似乱数を生成するアルゴリズムの一種です。その中でも、**MT19937** という手法には次のような長所があります。
+**Mersenne Twister** (**MT**, メルセンヌ・ツイスタ) は擬似乱数を生成するアルゴリズムの一種です。その中でも、**MT19937** という手法には次のような長所があります。
 
 - 周期が $2^{19937}-1$ と非常に長い。
 - 高次元（$623$ 次元）でも均等に分布する。
 - 擬似乱数の生成が高速。
 
-このような特徴から、様々なプログラミング言語の標準的な擬似乱数生成器に Mersenne twister が採用されています。たとえば、Python の `random` には MT19937 が採用されています。
+このような特徴から、様々なプログラミング言語の標準的な擬似乱数生成器に Mersenne Twister が採用されています。たとえば、Python の `random` には MT19937 が採用されています。
 
-しかし、Mersenne twister は**暗号論的擬似乱数**ではありません。暗号論的擬似乱数とは、暗号論的に安全な擬似乱数のことを指し、具体的には予測不可能であることが求められます。つまり、Mersenne twister は一定の条件下で予測可能な擬似乱数です。
+しかし、Mersenne Twister は**暗号論的擬似乱数**ではありません^[実際、[Mersenne Twister Home Page](http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt.html) では「モンテカルロ法用疑似乱数」と説明されています。]。暗号論的擬似乱数とは、暗号論的に安全な擬似乱数のことを指し、具体的には予測不可能であることが求められます。つまり、Mersenne Twister は一定の条件下で予測可能な擬似乱数です。
 
 この記事では、MT19937 によって出力された乱数列から、未来と過去の乱数列を予測します。より詳細には次の 2 ステップを取ります。
 
@@ -31,7 +31,7 @@ http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
 
 ### ライブラリと定数
 
-`stdio.h` を include していますが、これは `main` 関数でのサンプル用です。そのため、`mt19937ar.c` は単体で動作します。
+`stdio.h` を include していますが、これは `main` 関数でのサンプル用です。そのため、`mt19937ar.c` は単体で動作します^[ファイルを分割した[バージョン](http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/mt19937ar.html)もあります（参照先の一番下）。]。
 
 ```C
 #include <stdio.h>
@@ -49,7 +49,7 @@ http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c
 
 ### 状態ベクトル
 
-内部状態を表す状態ベクトル `mt` は次のように定義されます。`mti` は次に生成される乱数を示す index です。`mti` が `N+1` の場合、内部状態が初期化されていない、つまり後述の `init_genrand` が一度も呼び出されていないことを示します。
+内部状態を表す状態ベクトル `mt` は次のように定義されます。`mti` は次に生成される乱数を表す index です。`mti` が `N+1` の場合、内部状態が初期化されていない、つまり後述の `init_genrand` が一度も呼び出されていないことを示します。
 
 ```C
 static unsigned long mt[N]; /* the array for the state vector  */
@@ -200,14 +200,14 @@ random.setstate((3, tuple(mt_state + [N]), None))
 `random.setstate` の引数として与えられるタプル（またはリスト）の要素は次の通りです。[ドキュメント](https://docs.python.org/3/library/random.html)にほとんど記載されていないので、[CPython の実装](https://github.com/python/cpython/blob/3.11/Lib/random.py)を参考にしました。
 
 - `version`
-  バージョンごとに処理を分岐させる。`3` または `2`。通常使用では `3` でよさそう。
+  バージョンごとに処理を分岐させる。`3` または `2`。通常用途では `3` でよさそう。
   > In version 2, the state was saved as signed ints, which causes inconsistencies between 32/64-bit systems. The state is really unsigned 32-bit ints, so we convert negative ints from version 2 to positive longs for version 3.
 - `internalstate`
   内部状態。`mt19937ar.c` における `mt` と `mti` のタプル。
 - `gauss_next`
-  ガウス分布の計算で使われるパラメータ。通常使用では `None` でよさそう。$\mu + z \sigma$ の $z$ に対応する。
+  ガウス分布の計算で使われるパラメータ。通常用途では `None` でよさそう。$\mu + z \sigma$ の $z$ に対応する。
 
-最後に、復元した内部状態から生成される乱数列が、検証用の乱数列（未来） `xs2` と一致するか検証します。結果は無事一致しました。ちなみに、`mti` を `0` にすると `predicted` は `xs1` と一致します。
+最後に、復元した内部状態から生成される乱数列 `predicted` が、検証用の乱数列（未来） `xs2` と一致するか検証します。結果は無事一致しました。ちなみに、`mti` を `0` にすると `predicted` は `xs1` と一致します。
 
 ```python
 predicted = [random.getrandbits(32) for _ in range(N)]
@@ -381,10 +381,11 @@ print(predicted == xs0)
 
 ## おわりに
 
-この記事では、Mersenne twister の MT19937 について説明し、乱数の出力結果から内部状態を復元し、更新前の内部状態に遡る方法を示しました。数値シミュレーションのように予測不可能性を必要としない場合には、Mersenne twister のような擬似乱数は有用でしょう。しかし、暗号のように予測不可能性を必要とする場合には不適切で、代わりに暗号論的擬似乱数を使用すべきです。実際、この記事で示したように、条件が揃うと簡単に予測できます。
+この記事では、Mersenne Twister の MT19937 について説明し、乱数の出力結果から内部状態を復元し、更新前の内部状態に遡る方法を示しました。数値シミュレーションのように予測不可能性を必要としない場合には、Mersenne Twister のような擬似乱数は有用でしょう。しかし、暗号のように予測不可能性を必要とする場合には不適切で、代わりに暗号論的擬似乱数を使用すべきです。実際、この記事で示したように、条件が揃うと簡単に予測できます。
 
 ## 参考
 
+- [Mersenne Twister Home Page](http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/mt.html)
 - [メルセンヌ・ツイスタ（Wikipedia）](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%B3%E3%83%8C%E3%83%BB%E3%83%84%E3%82%A4%E3%82%B9%E3%82%BF)
 - [暗号論的擬似乱数生成器（Wikipedia）](https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E8%AB%96%E7%9A%84%E6%93%AC%E4%BC%BC%E4%B9%B1%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8)
 - [mt19937ar.c](http://www.math.sci.hiroshima-u.ac.jp/m-mat/MT/MT2002/CODES/mt19937ar.c)

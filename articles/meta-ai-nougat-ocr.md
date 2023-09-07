@@ -3,7 +3,7 @@ title: "Meta AIの数式対応OCR『Nougat』を試してみた"
 emoji: "😽"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "機械学習", "OCR", "PDF", "Nougat"]
-published: false
+published: true
 ---
 
 ## Nougat とは
@@ -12,7 +12,7 @@ https://facebookresearch.github.io/nougat/
 
 Nougat（Neural Optical Understanding for Academic Documents）は、Meta AI が開発した英語の論文解析に特化した OCR です。Nougat を使うと、論文 PDF を Mathpix Markdown と互換性がある形式（`.mmd`）に変換できます。
 
-Nougat の最大の特徴は、数式に対応していることです。実際、Nougat の Example Pages には衝撃的な例が示されています。分数や、曲がっている下の図の Eq. (2.3) の $\hbar$ や $\eta_{r,s}^{qQ}$ のような細かいところまである程度正確に読み取っています。
+Nougat の最大の特徴は、数式に対応していることです。実際、Nougat の Example Pages には衝撃的な例が示されています。分数や、$\hbar$ や $\eta_{r,s}^{qQ}$ のような細かいところまである程度正確に読み取っています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/99f8f4e222b3-20230907.png)
 
@@ -155,7 +155,7 @@ Google Colab (T4) での実行時間：1 分 47 秒
 
 #### ["Mechanics" (Landau and Lifshitz, 1976)](https://archive.org/details/landau-and-lifshitz-physics-textbooks-series/Vol%201%20-%20Landau%2C%20Lifshitz%20-%20Mechanics%20%283rd%20ed%2C%201976%29/)
 
-数式だけでなく英語のスペルすら怪しい箇所が多いです。なぜか大量のバーがついています。
+数式だけでなく英語のスペルすら怪しい箇所が多いです。なぜか大量にバーがついています。
 
 ![](https://storage.googleapis.com/zenn-user-upload/9b8f807e1764-20230907.png)
 
@@ -183,6 +183,7 @@ SNS 上では昔の論文や技術文書への適用が期待されていまし�
 - [Nougat](https://facebookresearch.github.io/nougat/)
 - [facebookresearch/nougat - github](https://github.com/facebookresearch/nougat)
 - [ysharma/nougat - Huggingface Community Demo](https://huggingface.co/spaces/ysharma/nougat)
+- [Nougat: Neural Optical Understanding for Academic Documents](https://arxiv.org/abs/2308.13418)
 
 ## 関連記事
 

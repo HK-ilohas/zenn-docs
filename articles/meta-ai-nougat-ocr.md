@@ -189,3 +189,4 @@ SNS 上では昔の論文や技術文書への適用が期待されていまし�
 
 - [数式や文章がぐにゃぐにゃに曲がった論文 PDF でもくっきり認識する画期的な OCR『Nougat』― AIDB](https://aiboom.net/archives/54869)
 - [数式を含むスキャン画像の PDF を OCR してマークダウン形式に変換できる。Nougat を試す ― はまち](https://note.com/hamachi_jp/n/n7f5f35b38768)
+- [2023-09-07 ML 勉強会 ― LayerX](https://jobs.layerx.co.jp/3d1b0e79b59d4ba8acbc7f9a74b5f96e)

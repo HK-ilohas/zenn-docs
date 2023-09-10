@@ -3,7 +3,7 @@ title: "GaussianProcesses.jlでガウス過程回帰【Julia】"
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Julia", "機械学習", "ガウス過程"]
-published: false
+published: true
 ---
 
 ## はじめに

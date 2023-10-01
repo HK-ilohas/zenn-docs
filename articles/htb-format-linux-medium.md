@@ -77,7 +77,7 @@ Login と Register には脆弱性は見つかりませんでした。一旦、�
 
 ## microblog.htb
 
-次に、3000 番の方の http にアクセスしました。そのページを見てみると、ブログのソースコードがありました。ちなみに、このページは `app.microblog.htb` にリンクからも飛べます。
+次に、3000 番の方の http にアクセスしました。そのページを見てみると、ブログのソースコードがありました。ちなみに、このページは `app.microblog.htb` にあるリンクからも飛べます。
 
 ![](https://storage.googleapis.com/zenn-user-upload/0d966373a073-20231001.png)
 

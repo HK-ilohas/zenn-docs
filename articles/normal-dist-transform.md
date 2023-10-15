@@ -386,7 +386,7 @@ import numpy as np
 from scipy.stats import multivariate_normal
 
 N = 100000
-mu = np.array([3, 5])
+mu = np.array([0, 0])
 sigma = np.array([[1,0],[0,1]])
 
 X1 = np.random.multivariate_normal(mu, sigma, size=N)
@@ -400,7 +400,7 @@ ax[1].set_title("SciPy")
 plt.show()
 ```
 
-![](https://storage.googleapis.com/zenn-user-upload/7f7567676f68-20231015.png)
+![](https://storage.googleapis.com/zenn-user-upload/54465a20e71e-20231015.png)
 
 まず、共分散行列 $\mathbf{\Sigma}$ をコレスキー分解します。
 

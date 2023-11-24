@@ -3,7 +3,7 @@ title: "【Obsidian】2023 年でオススメのプラグイン 66 選"
 emoji: "😸"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["obsidian"]
-published: false
+published: true
 ---
 
 ## はじめに

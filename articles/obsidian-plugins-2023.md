@@ -91,6 +91,8 @@ https://github.com/FlorianWoelki/obsidian-iconize
 
 ファイルエクスプローラ上でノートにアイコンを付けるプラグイン。ノートのビジュアル的な分類で活躍。自分はファイル補完にダウンロードしたアイコンが出てきて嫌という理由で現在はアンインストールしている。
 
+![](https://storage.googleapis.com/zenn-user-upload/01dc7a589d99-20231124.png)
+
 ### Templater ★
 
 https://github.com/SilentVoid13/Templater

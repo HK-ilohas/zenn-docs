@@ -1,5 +1,5 @@
 ---
-title: "【Obsidian】現環境（2023 年）でオススメのプラグイン 66 選"
+title: "【Obsidian】2023 年でオススメのプラグイン 66 選"
 emoji: "😸"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["obsidian"]

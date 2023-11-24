@@ -433,11 +433,11 @@ https://github.com/javalent/settings-search
 
 設定画面に検索機能を追加するプラグイン。何故これが標準でないのだろうか。
 
-### Theme Picker ★
+### Theme Picker ☆
 
 https://github.com/kenset/obsidian-theme-picker
 
-theme をサクッと変えるプラグイン。複数の theme を試したいときに便利。
+theme をサクッと変えるプラグイン。複数の theme を試したいときに便利。標準でも似たような機能があるので要らない気もするけど、コマンドが英語なので好き。
 
 ![](https://storage.googleapis.com/zenn-user-upload/844ace5d00bc-20231124.gif)
 

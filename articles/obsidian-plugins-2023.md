@@ -6,6 +6,11 @@ topics: ["obsidian"]
 published: true
 ---
 
+## 更新履歴
+
+- 2023-11-24: 公開
+- 2023-11-26: Theme Picker を除外して、Gist を追加
+
 ## はじめに
 
 この記事では、自分が実際に使ってみて良かった Obsidian のプラグインを紹介します。各プラグインのオススメ度は以下の通りです。何から試したらいいのかわからない人には、とりあえず ★★★ と ★★ がオススメです。
@@ -213,6 +218,14 @@ https://github.com/yildbs/obsidian-harada-method-plugin
 Shohei Otani で有名な原田メソッドのプラグイン。見つけたときはなんだコレとなった。
 
 ![](https://storage.googleapis.com/zenn-user-upload/c460c11d811a-20231124.gif)
+
+### Gist ☆
+
+https://github.com/linjunpop/obsidian-gist
+
+[GitHub Gist](https://gist.github.com/) をレンダーしてくれるプラグイン。過去の自分が書いたメモが gist を使ってて、移行の際にどうしようとなったときに発見した救世主。
+
+![](https://storage.googleapis.com/zenn-user-upload/6d284653d9fa-20231126.png)
 
 ## 外部連携
 
@@ -432,14 +445,6 @@ https://github.com/swar8080/obsidian-plugin-update-tracker
 https://github.com/javalent/settings-search
 
 設定画面に検索機能を追加するプラグイン。何故これが標準でないのだろうか。
-
-### Theme Picker ☆
-
-https://github.com/kenset/obsidian-theme-picker
-
-theme をサクッと変えるプラグイン。複数の theme を試したいときに便利。標準でも似たような機能があるので要らない気もするけど、コマンドが英語なので好き。
-
-![](https://storage.googleapis.com/zenn-user-upload/844ace5d00bc-20231124.gif)
 
 ## LaTeX
 

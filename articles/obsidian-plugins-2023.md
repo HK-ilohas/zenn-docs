@@ -10,6 +10,7 @@ published: true
 
 - 2023-11-24: 公開
 - 2023-11-26: Theme Picker を除外して、Gist を追加
+- 2023-11-28: Pseudocode を除外して、ReadItLater を追加
 
 ## はじめに
 
@@ -470,12 +471,6 @@ https://github.com/artisticat1/obsidian-tikzjax
 
 TikZ に対応するプラグイン。レンダークオリティはまあまあ。
 
-### Pseudocode ☆
-
-https://github.com/ytliu74/obsidian-pseudocode
-
-疑似コードを作成する `algorithm` に対応するプラグイン。
-
 ## その他
 
 ### Obsidian Memos ★★
@@ -520,11 +515,17 @@ Notion のデータベースみたいなプラグイン。UI も似ていて、�
 
 https://github.com/RafaelGB/obsidian-db-folder
 
+## ReadItLater ★★
+
+https://github.com/DominikPieper/obsidian-ReadItLater
+
+クリップボートにある URL のページを読み取ってダウンロードするプラグイン。画像を最初からローカル保存してくれる。テンプレートで色々と調整できて便利。
+
 ### Advanced URI ★
 
 https://github.com/Vinzent03/obsidian-advanced-uri
 
-URI で色々できるプラグイン。使用例は他の記事を参照のこと。自分の場合は、MarkDownload を使って Web サイトを保存し、それを Obsidian で読み込む際に使用する。
+URI で色々できるプラグイン。使用例は他の記事を参照のこと。
 
 ### Text Extractor ★
 

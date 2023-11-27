@@ -514,14 +514,7 @@ if __name__ == "__main__":
 
 ASCON という軽量の暗号があるらしい。しかも新しい。これ自体は破れなさそう。
 
-```cardlink
-url: https://pypi.org/project/ascon/
-title: "ascon"
-description: "Lightweight authenticated encryption and hashing"
-host: pypi.org
-favicon: https://pypi.org/static/images/favicon.35549fe8.ico
-image: https://pypi.org/static/images/twitter.abaf4b19.webp
-```
+https://pypi.org/project/ascon/
 
 接続すると、まず `key` が生成される。もちろん、予測不可である。
 

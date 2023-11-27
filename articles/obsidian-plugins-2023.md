@@ -519,7 +519,7 @@ https://github.com/RafaelGB/obsidian-db-folder
 
 https://github.com/DominikPieper/obsidian-ReadItLater
 
-クリップボートにある URL のページを読み取ってダウンロードするプラグイン。画像を最初からローカル保存してくれる。テンプレートで色々と調整できて便利。
+クリップボードにある URL のページを読み取ってダウンロードするプラグイン。画像を最初からローカル保存してくれる。テンプレートで色々と調整できて便利。
 
 ### Advanced URI ★
 

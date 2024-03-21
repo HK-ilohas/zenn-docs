@@ -3,7 +3,7 @@ title: "Pocketfft: C++のFFTライブラリの使用方法"
 emoji: "💭"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["cpp", "fft"]
-published: false
+published: true
 ---
 
 ## Pocketfft とは
@@ -62,7 +62,7 @@ using namespace pocketfft;
 
 ### 基本的な１次元 FFT
 
-以下は、実数配列から複素数配列への FFT の例である。複素数同士で実行する場合は `c2c` を使えばよい。また、`double` 以外を使用する場合は、単に `double` や `1.` などの箇所を変更すればよい。
+以下は、実数配列から複素数配列への FFT の例である。複素数同士で実行する場合は `c2c` を使えばよい。また、`double` 以外を使用する場合は、単に `double` や `1.` などの箇所を変更する。
 
 ```cpp:demo1.cpp
 #include <complex>

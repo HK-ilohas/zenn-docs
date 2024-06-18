@@ -26,7 +26,6 @@ published: false
 :::details Python環境について
 バージョン：3.12.3
 
-
 ```bash
 $ pip install setuptools
 $ pip install numpy
@@ -2801,3 +2800,10 @@ plt.show()
 
 ![](/images/dynamic-bunki/30.png)
 ![](/images/dynamic-bunki/31.png)
+
+## 参考文献
+
+- 小室元政[『新版 基礎からの力学系 分岐解析からカオス的遍歴へ』](https://www.saiensu.co.jp/search/?isbn=978-4-7819-1118-2&y=2005)
+- 川上博[『非線形現象入門』](http://cms.db.tokushima-u.ac.jp/DAV/person/S10723/%e5%9b%9e%e8%b7%af%e3%81%a8%e9%9d%9e%e7%b7%9a%e5%bd%a2/NonlinearPhenomena.pdf)
+- 大貫義郎、吉田春夫[『岩波講座 現代の物理学 1 力学』](https://www.iwanami.co.jp/book/b475700.html)
+- 吉田善章、永長直人、石村直之、西成活裕[『東京大学工学教程 非線形数学』](https://www.maruzen-publishing.co.jp/item/?book_no=294969)

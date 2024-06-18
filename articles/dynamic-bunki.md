@@ -3,7 +3,7 @@ title: "【力学系超入門】平衡点の分岐：線形安定性解析【Pyt
 emoji: "📘"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["python", "力学系"]
-published: false
+published: true
 ---
 
 ## 1. 力学系

@@ -3,7 +3,7 @@ title: "WaniCTF 2024 Writeup"
 emoji: "👻"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["CTF"]
-published: false
+published: true
 ---
 
 

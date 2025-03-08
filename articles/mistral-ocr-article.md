@@ -14,7 +14,7 @@ Mistral OCR は学術論文に含まれるテキスト、数式、表、画像�
 
 このワークフローを使えば、英語論文をより読みやすい形式で日本語閲覧できるようになり、研究活動や学習の効率向上に役立ちます。
 
-## Mistral OCRとは
+## Mistral OCR とは
 
 https://mistral.ai/en/news/mistral-ocr
 
@@ -74,9 +74,9 @@ Mistral OCR は、他の主要 OCR モデルと比較して優れた性能を示
 
 他の OCR サービスと比較すると、コストパフォーマンスに優れています。特に論文のような複雑な構造を持つ文書の処理においては、この価格設定は非常に魅力的です。
 
-## Mistral OCRの使用方法
+## Mistral OCR の使用方法
 
-### Mistral APIの取得
+### Mistral API の取得
 
 https://mistral.ai/
 
@@ -332,13 +332,17 @@ https://arxiv.org/abs/1706.03762
 
 公式サンプルほど完璧な結果を期待するのは現実的ではありませんが、論文の構造をほぼ維持したまま抽出できていることがわかります。特に数式や表の認識精度は他の OCR サービスと比較して非常に高いです。
 
-## 応用例‐Markdownを変換して日本語HTMLを作成する
+## 応用例‐Markdown を変換して日本語 HTML を作成する
 
 次に、OCR で生成された Markdown を HTML 化し、さらに日本語に翻訳する方法を紹介します。この部分は非常に荒削りなものですが、基本的なワークフローは理解できるでしょう。
 
 以下のスクリプトは Markdown を HTML に変換するものです（※ 大部分は Claude AI によって生成されています）。
 
 https://gist.github.com/HK-ilohas/db296b819a8a40caaacd6f9abbfa12e6
+
+```bash
+$ python ocr_to_html.py --pdf ./paper.pdf --output-dir ./output
+```
 
 生成された HTML を Gemini（gemini-2.0-flash-thinking-exp-01-21）に投げて日本語に翻訳させました。使用したプロンプトは以下のシンプルなものです。
 

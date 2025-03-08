@@ -408,3 +408,7 @@ Mistral OCR は比較的新しいサービスで、今後さらに機能が拡�
 
 1. Mistral AI 公式ドキュメント - [OCR and Document Understanding](https://docs.mistral.ai/capabilities/document/)
 2. Mistral AI 公式ブログ - [Mistral OCR](https://mistral.ai/news/mistral-ocr)
+
+## 関連記事
+
+https://zenn.dev/hk_ilohas/articles/meta-ai-nougat-ocr

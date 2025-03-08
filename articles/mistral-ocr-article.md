@@ -48,7 +48,7 @@ Mistral OCR は、他の主要 OCR モデルと比較して優れた性能を示
 | **Mistral OCR 2503** | **94.89** | **94.29** | **89.55** | **98.96** | **96.12** |
 
 ![](/images/mistral-article/bou.jpeg)
-![](/images/mistral-article/gantchart.jpeg)
+<!-- ![](/images/mistral-article/gantchart.jpeg) -->
 
 多言語対応においても、Mistral OCR は他のサービスを上回るパフォーマンスを示しています。
 

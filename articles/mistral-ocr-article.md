@@ -105,7 +105,7 @@ $ pip install mistralai
 
 https://docs.mistral.ai/capabilities/document/
 
-:::details Python プログラム。
+:::details Python プログラム
 
 ```python
 import json

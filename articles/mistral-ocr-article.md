@@ -3,7 +3,7 @@ title: "話題のMistral OCRを徹底活用！英語論文を格安で高精度�
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "OCR", "Mistral", "Python"]
-published: false
+published: true
 ---
 
 ## はじめに

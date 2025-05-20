@@ -140,6 +140,7 @@ $$
     C = \frac{1}{N} \sum_{k=1}^N \ket{x_k} \bra{x_k}
     $$
 2. 演算子 $C$ の固有値 $\lambda_n$ と固有ベクトル $\ket{\lambda_n}$ を求める。ただし、
+    - $\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_D \ge 0$ は演算子 $C$ の実固有値
 	- 固有値に対応する固有ベクトルを $\ket{\lambda_1}, \ket{\lambda_2}, \cdots, \ket{\lambda_D}$ 
 	- $\{ \ket{\lambda_n} \}_{n=1}^D$ は $\mathbb{R}^D$ の正規直交基底
 3. 主成分の数を $K$ として、
